@@ -1,5 +1,8 @@
-<?php include('./php/setup.php');?>
-<?php include_once ('admin/includes/connection.php'); ?>
+<?php 
+	define("parent",dirname(__FILE));
+	include('./php/setup.php');
+ 	include_once ('admin/includes/connection.php');
+ ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="ie9 loading-site no-js">
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="ie8 loading-site no-js">
@@ -38,7 +41,7 @@
     ========================================================================
     -->
     <!-- CSS links -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?=parent?>/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/material-design-iconic-font.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
@@ -102,12 +105,12 @@
         <!-- NAVIGATION LINKS -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.php#home" class="active smoothScroll">Home</a></li>
+                <li class="active"><a href="index.php#home" class="active smoothScroll">Home</a></li>
                 <li><a href="index.php#about" class="smoothScroll">About</a></li>
+                <li><a href="index.php#blog" class="smoothScroll">Blog</a></li>
                 <li><a href="index.php#services" class="smoothScroll">Services</a></li>
                 <li><a href="index.php#portfolio" class="smoothScroll">Portfolio</a></li>
                 <li><a href="index.php#testimonials" class="smoothScroll">Testimonials</a></li>
-                <li><a href="index.php#blog" class="smoothScroll">Blog</a></li>
                 <li><a href="index.php#contact" class="smoothScroll">Contact</a></li>
                 <li><a href="admin/" class="smoothScroll btn">Login</a></li>
             </ul>
